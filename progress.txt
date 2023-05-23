@@ -1,3 +1,5 @@
+https://github.com/fastai/fastbook
+https://course.fast.ai/
 Progress:
 * lesson 1 done
 * lesson 2 done
