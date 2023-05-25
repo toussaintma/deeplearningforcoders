@@ -20,6 +20,7 @@
 - Choosing a good validation set is hard! domain knowledge helps a lot
 - df = pd.concat([datasets]) to concatenate training and validation set for discovery and preprocessing
 - df[col].str.contains() for text fields
+- pd.pivot_table() to understand how input impact results
 - pd.read_csv(), df.head(), df.tail(), df.describe(), df.hist(), df.info(), df.sample(n)
 - df.isna(), df.isnull(), df['col'].value_counts() and df.isna().sum() to identify missing values
 - df.corr() correlation matrix
@@ -35,6 +36,7 @@
 - modes = df.mode().iloc[0] to find modes and select the first one
 - df.fillna() to fill missing values and to fill with modes: df.fillna(modes, inplace=True)
 - df[~df[col].isna()] to select rows without nan in column col
+- for modification of cells select on both rows and columns with df.loc[condition on rows, condition on cols]
 - Panda[] is typically selecting by rows, add [] to create column lists if needed
 - one hot with pd.get_dummies(df, columns = [cols])
 - apply log with df['col'] = np.log1p(df['col']) note the +1 do avoid problem at x = 0
