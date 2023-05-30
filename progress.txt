@@ -1,7 +1,20 @@
-https://github.com/fastai/fastbook
-https://course.fast.ai/
-Progress:
+## Fast.ai Practical Deep Learning for Coders
+
+### Progress
 * lesson 1 done
 * lesson 2 done
 * lesson 3 done
-* lesson 4 
+* lesson 4 done
+* lesson 5 done
+* lesson 6 done
+* lesson 7 ongoing
+* lesson 8
+
+### Resources
+https://github.com/fastai/fastbook
+https://course.fast.ai/
+
+
+### TODO
+* Review how to initialize weights with Pytorch and reproduce the multi layer manual results
+
