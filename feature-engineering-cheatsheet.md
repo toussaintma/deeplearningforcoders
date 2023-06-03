@@ -23,7 +23,8 @@
 - pd.pivot_table(df, values='valuestosum', index=['columnforrows'], columns=['columnforcols'], aggfunc=np.sum, fill_value=0) to understand how input impact results
 - pd.read_csv(), df.head(), df.tail(), df.describe(), df.hist(), df.info(), df.sample(n)
 - df.isna(), df.isnull(), df['col'].value_counts() and df.isna().sum() to identify missing values
-- df.corr() correlation matrix
+- df.nlargest(count,'col') shows the count top values
+- df.corr(numeric_only=True)) correlation matrix
 - pd.plotting.scatter_matrix(df) to see data between features
 - it is good to fit a Decision Tree to understand feature importance
     - use df.fillna(method="ffill"), df.drop() and pd.get_dummies() to remove missing values, categorical and columns quickly
