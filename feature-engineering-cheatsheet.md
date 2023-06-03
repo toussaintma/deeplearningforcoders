@@ -20,7 +20,7 @@
 - Choosing a good validation set is hard! domain knowledge helps a lot
 - df = pd.concat([datasets]) to concatenate training and validation set for discovery and preprocessing
 - df[col].str.contains() for text fields
-- pd.pivot_table() to understand how input impact results
+- pd.pivot_table(df, values='valuestosum', index=['columnforrows'], columns=['columnforcols'], aggfunc=np.sum, fill_value=0) to understand how input impact results
 - pd.read_csv(), df.head(), df.tail(), df.describe(), df.hist(), df.info(), df.sample(n)
 - df.isna(), df.isnull(), df['col'].value_counts() and df.isna().sum() to identify missing values
 - df.corr() correlation matrix

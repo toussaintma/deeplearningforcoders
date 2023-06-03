@@ -45,6 +45,7 @@ print(f"{loss:.3f}", end="; ")
 
 ## TODO
 * TODO topic of initializing the weights in Pytorch
+nn.Parameter(torch.zeros(*size).normal_(0, 0.01))
 
 ## Useful Links
 
