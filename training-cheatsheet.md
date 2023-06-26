@@ -18,7 +18,20 @@ import torch.nn as nn
 * 
 
 ## Find a good validation set
-* with scikit-learn
+* with scikit-learn use cross validation cross_val_score(clf, df_x, df_y, cv=StratifiedKFold(n_splits=5))
+* check imbalance for classification problems, train with balancing parameters
+* cv = RepeatedStratifiedKFold(n_splits=10, n_repeats=3, random_state=1)
+* in scikit learn, from sklearn.metrics import make_scorer must wrap a custom scoring function to be used by cross_val_score
+
+## Feature Reduction
+* find feature importance with Random Forest: forest_importances = pd.Series(clf.feature_importances_, index=df.columns)
+* PCA
+* Boruta algorithm: from boruta import BorutaPy will select df.head(clf.n_features_) sur la base de clf.ranking_ == 1
+* other scikit-learn algorithms
+
+## Imbalanced datasets
+* minority augmentation: use SMOTE but only on numerical scaled features. Optimize the whole SMOTE + model
+* may algorithms have a balanced parameters to optimize
 
 ## Image manipulation
 * with PILImage but usually imported in higher level tools
@@ -42,6 +55,10 @@ print(f"{loss:.3f}", end="; ")
 ```
 * t = torch.where(condition on t, if True, if False) for a if-then on the data
 * use fast.ai for learn rate search with learn.lr_find(suggest_funcs=(valley, slide))
+
+## Ensemble
+* VotingClassifier with or without weight
+* StackingClassifier with a final estimator LogisticRegression(class_weight='balanced')
 
 ## TODO
 * TODO topic of initializing the weights in Pytorch

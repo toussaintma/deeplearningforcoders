@@ -5,19 +5,21 @@
 
 ## Imports and tooling
 
-- Numpy, Pandas, Matplotlib
-- import numpy as np # linear algebra
-- import pandas as pd # data processing, CSV file I/O (e.g. pd.read_csv)
-- from matplotlib import pyplot as plt
-- import os
-- from sklearn.tree import DecisionTreeClassifier
-- from sklearn import tree
+* Numpy, Pandas, Matplotlib, seaborn
+* import numpy as np # linear algebra
+* import pandas as pd # data processing, CSV file I/O (e.g. pd.read_csv)
+* from matplotlib import pyplot as plt
+* import os
+* from sklearn.tree import DecisionTreeClassifier
+* from sklearn import tree
+* import seaborn as sns for visualization especially with lots of features
 
 ## Data Discovery
 
 - Most can be done with Pandas
 - Domain knowledge is key to understand the data and values (almost all of titanic can be done with only the name column!)
 - Choosing a good validation set is hard! domain knowledge helps a lot
+- beware of imbalanced classes!
 - df = pd.concat([datasets]) to concatenate training and validation set for discovery and preprocessing
 - df[col].str.contains() for text fields
 - pd.pivot_table(df, values='valuestosum', index=['columnforrows'], columns=['columnforcols'], aggfunc=np.sum, fill_value=0) to understand how input impact results
@@ -30,6 +32,11 @@
     - use df.fillna(method="ffill"), df.drop() and pd.get_dummies() to remove missing values, categorical and columns quickly
     - clf = DecisionTreeClassifier(max_leaf_nodes=3, random_state=0) and clf.fit(train_x, train_y)
     - tree.plot_tree(clf, feature_names=train_x.columns, filled=True) and plt.show() to show the tree
+
+## Data Visualization
+
+* seaborn shows colored high def vizualization: sns.displot(col), sns.boxplot(col), sns.countplot(col)
+* scatter plot betwene 2 cols: sns.scatterplot(x='col1', y='col2', data=df) or sns.jointplot(x='col1', y='col2')
 
 ## Feature Engineering
 
