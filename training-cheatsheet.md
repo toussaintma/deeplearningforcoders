@@ -13,6 +13,7 @@ import torch.nn.functional as F
 import torch.nn as nn
 ```
 * create a tensor with t = torch.tensor(df.values, dtype=torch.float) df.values is a numpy array
+* initialize tensor of zero with torch.zeros()
 * t = torch.unsqueeze(t, 0) to add a dimension (ie typically from a list of scalars to a vector)
 * t = torch.transpose(t, 0, 1) to transpose a vector
 * 

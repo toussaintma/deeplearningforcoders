@@ -32,6 +32,8 @@
     - use df.fillna(method="ffill"), df.drop() and pd.get_dummies() to remove missing values, categorical and columns quickly
     - clf = DecisionTreeClassifier(max_leaf_nodes=3, random_state=0) and clf.fit(train_x, train_y)
     - tree.plot_tree(clf, feature_names=train_x.columns, filled=True) and plt.show() to show the tree
+- automating data regularization with scikit-learn: clf = make_pipeline(KNNImputer(), RobustScaler(), XGBClassifier()) gives automated names to steps
+- the same with named steps: pipe = Pipeline(steps=[("scaler", KNNImputer()), ("pca", RobustScaler(), ("logistic", XGBClassifier())])
 
 ## Data Visualization
 
