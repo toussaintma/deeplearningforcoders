@@ -14,6 +14,5 @@
 https://github.com/fastai/fastbook
 https://course.fast.ai/
 
-### TODO
 
 
