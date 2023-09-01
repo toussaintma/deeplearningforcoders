@@ -5,14 +5,3 @@ https://course.fast.ai/Resources/book.html
 
 How to: listen to video, then read book, then answer questions, then run own code
 
-
-
-then
-https://huggingface.co/course/chapter1/1
-then
-https://huggingface.co/course/chapter9/1
-then
-personal project
-
-
-
